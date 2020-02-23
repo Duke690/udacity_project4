@@ -16,8 +16,6 @@ ros::Publisher motor_command_publisher;
 bool handle_drive_request(ball_chaser::DriveToTarget::Request& req,
                           ball_chaser::DriveToTarget::Response& res)
 {
-  ROS_INFO("Incoming handle drive request");
-
   // Create a motor_command object of type geometry_msgs::Twist
   geometry_msgs::Twist motor_command;
   // Set wheel velocities, forward [0.5, 0.0]
@@ -26,7 +24,8 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req,
   // Publish angles to drive the robot
   motor_command_publisher.publish(motor_command);
 
-  res.msg_feedback = std::to_string(req.linear_x);
+  res.msg_feedback = "linear: " + std::to_string(req.linear_x) +
+                     ", angular: " + std::to_string(req.angular_z);
 }
 
 int main(int argc, char** argv)
