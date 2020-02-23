@@ -125,6 +125,9 @@
       <geometry>
         <cylinder radius="0.1" length="0.05" />
       </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
     </visual>
   </link>
 
@@ -151,6 +154,9 @@
       <geometry>
         <cylinder radius="0.1" length="0.05" />
       </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
     </visual>
   </link>
 
@@ -167,7 +173,7 @@
       />
     </inertial>
 
-    <collision name='collision'>
+    <collision name='chassis_collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
         <box size=".4 .2 .1"/>
@@ -179,6 +185,9 @@
       <geometry>
         <box size=".4 .2 .1"/>
       </geometry>
+      <material name="metal">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
     </visual>
 
 
@@ -194,6 +203,9 @@
       <geometry>
         <sphere radius="0.05"/>
       </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
     </visual>
 
     <collision name='front_caster_collision'>
@@ -208,6 +220,9 @@
       <geometry>
         <sphere radius="0.05"/>
       </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1.0"/>
+      </material>
     </visual>
 
   </link>
