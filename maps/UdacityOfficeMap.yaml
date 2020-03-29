@@ -1,0 +1,5 @@
+image: UdacityOfficeMap.pgm
+resolution: 0.01
+origin: [-45.0, -45.0, 0.0]
+free_thresh: 0.196
+negate: 0
